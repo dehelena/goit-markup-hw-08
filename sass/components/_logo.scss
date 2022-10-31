@@ -1,0 +1,30 @@
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: var(--dark-logo-color);
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  transition: color var(--transition-dur-and-tim);
+
+  &:hover,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.logo__colored {
+  color: var(--accent-color);
+}
+
+.nav__logo {
+  color: var(--dark-logo-color);
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: var(--primary-background-color);
+}
