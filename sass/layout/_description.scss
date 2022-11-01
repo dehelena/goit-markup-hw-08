@@ -1,3 +1,9 @@
+.description {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .description__item {
   display: flex;
   flex-basis: calc((100% - 60px) / 3);

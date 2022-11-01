@@ -1,0 +1,25 @@
+.menu-toggle {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-toggle .menu-toggle__icon-close {
+  display: none;
+}
+
+.menu-toggle .is-open .menu-toggle__icon-close {
+  display: block;
+}
+
+.menu-toggle .is-open .menu-toggle__icon-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}

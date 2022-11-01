@@ -21,17 +21,26 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <button class="menu-toggle">
-          <svg class="icon-menu_toggle" width="40" heigh="40">
-            <use href="./images/symbol-defs.svg#icon-menu_toggle"></use>
-          </svg>
-        </button>
         <!-- Nav Bar -->
 
         <nav class="nav">
           <a class="logo nav__logo" href=""
             ><span class="logo__colored">Web</span>Studio</a
           >
+          <!-- menu mobile -->
+          <button class="menu-toggle" type="button">
+            <svg width="40" heigh="40" aria-label="перемикач мобільного меню">
+              <use
+                class="menu-button__icon-close"
+                href="./images/symbol-defs.svg#icon-close-modal"
+              ></use>
+              <use
+                class="menu-button__icon-menu"
+                href="./images/symbol-defs.svg#icon-menu"
+              ></use>
+            </svg>
+          </button>
+
           <ul class="site-nav">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link header__link"

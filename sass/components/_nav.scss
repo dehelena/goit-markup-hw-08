@@ -23,8 +23,7 @@
 /*  Nav Bar */
 
 .nav {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 .site-nav {
@@ -51,4 +50,11 @@
 
 .site-nav__item + .site-nav__item {
   margin-left: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    display: flex;
+    align-items: center;
+  }
 }
