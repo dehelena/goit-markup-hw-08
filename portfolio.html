@@ -27,31 +27,14 @@
           <a class="logo nav__logo" href=""
             ><span class="logo__colored">Web</span>Studio</a
           >
-          <!-- menu mobile -->
-          <button class="menu-toggle" type="button">
-            <svg width="40" heigh="40" aria-label="перемикач мобільного меню">
-              <use
-                class="menu-button__icon-close"
-                href="./images/symbol-defs.svg#icon-close-modal"
-              ></use>
-              <use
-                class="menu-button__icon-menu"
-                href="./images/symbol-defs.svg#icon-menu"
-              ></use>
-            </svg>
-          </button>
 
           <ul class="site-nav">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link header__link"
-                >Студія</a
-              >
+              <a href="./index.html" class="site-nav__link">Студія</a>
             </li>
 
             <li class="site-nav__item">
-              <a
-                href=""
-                class="site-nav__link header__link site-nav__link--current"
+              <a href="" class="site-nav__link site-nav__link--current"
                 >Портфоліо</a
               >
             </li>
@@ -61,6 +44,17 @@
             </li>
           </ul>
         </nav>
+
+        <!-- menu mobile -->
+
+        <button class="mobile-menu-btn" type="button" data-menu-open>
+          <svg width="40" height="40" aria-label="перемикач мобільного меню">
+            <use
+              class="mobile-menu-btn__icon"
+              href="./images/symbol-defs.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
 
         <!-- Contacts -->
 
@@ -88,6 +82,51 @@
           </li>
         </ul>
       </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-nav">
+            <li class="mobile-menu-nav__item">
+              <a class="mobile-menu-nav__link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu-nav__item">
+              <a
+                class="mobile-menu-nav__link mobile-menu-nav__link--current"
+                href=""
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu-nav__item">
+              <a class="mobile-menu-nav__link" href="">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-contacts">
+            <li class="mobile-menu-contacts__item">
+              <a class="mobile-menu-contacts__tel" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu-contacts__item">
+              <a
+                class="mobile-menu-contacts__email"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu-social">
+            <li><a class="mobile-menu-social__link" href="">Instagram</a></li>
+            <li><a class="mobile-menu-social__link" href="">Twitter</a></li>
+            <li><a class="mobile-menu-social__link" href="">Facebook</a></li>
+            <li><a class="mobile-menu-social__link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -98,28 +137,28 @@
           <!-- Filter -->
 
           <ul class="filter">
-            <li>
+            <li class="filter__item">
               <button class="filter__button button" type="button">Усі</button>
             </li>
 
-            <li>
+            <li class="filter__item">
               <button class="filter__button button" type="button">
                 Веб-сайти
               </button>
             </li>
 
-            <li>
+            <li class="filter__item">
               <button class="filter__button button" type="button">
                 Додатки
               </button>
             </li>
-            <li>
+            <li class="filter__item">
               <button class="filter__button button" type="button">
                 Дизайн
               </button>
             </li>
 
-            <li>
+            <li class="filter__item">
               <button class="filter__button button" type="button">
                 Маркетинг
               </button>
@@ -128,17 +167,35 @@
 
           <!-- Examples -->
 
-          <ul class="examples__list">
+          <ul class="examples">
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
-                  <img
-                    class="examples__image"
-                    src="images/technokryak.jpg"
-                    width="370"
-                    height="294"
-                    alt="ноутбук"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/technokryak-mob.jpg    1x,
+                        ./images/technokryak-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/technokryak-tablet.jpg    1x,
+                        ./images/technokryak-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/technokryak-d.jpg    1x,
+                        ./images/technokryak-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      class="examples__image"
+                      src="images/technokryak-mob.jpg"
+                      alt="ноутбук"
+                  /></picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -156,13 +213,31 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
-                  <img
-                    class="examples-image"
-                    src="images/poster-new-orlean.jpg"
-                    width="370"
-                    height="294"
-                    alt="постер баскетбол"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-mob.jpg    1x,
+                        ./images/poster-new-orlean-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-tablet.jpg    1x,
+                        ./images/poster-new-orlean-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-d.jpg    1x,
+                        ./images/poster-new-orlean-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      class="examples-image"
+                      src="images/poster-new-orlean-mob.jpg"
+                      alt="постер баскетбол"
+                  /></picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -182,13 +257,35 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
-                  <img
-                    class="examples-image"
-                    src="images/restaurant-seafood.jpg"
-                    width="370"
-                    height="294"
-                    alt="логотип акули"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-mob.jpg    1x,
+                        ./images/restaurant-seafood-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-tablet.jpg    1x,
+                        ./images/restaurant-seafood-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-d.jpg    1x,
+                        ./images/restaurant-seafood-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="examples-image"
+                      src="images/restaurant-seafood-mob.jpg"
+                      alt="логотип акули"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -208,13 +305,31 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
-                  <img
-                    class="examples-image"
-                    src="images/project-prime.jpg"
-                    width="370"
-                    height="294"
-                    alt="чорні навушники"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-prime-mob.jpg    1x,
+                        ./images/project-prime-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/project-prime-tablet.jpg    1x,
+                        ./images/project-prime-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/project-prime-d.jpg    1x,
+                        ./images/project-prime-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      class="examples-image"
+                      src="images/project-prime-mob.jpg"
+                      alt="чорні навушники"
+                  /></picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -234,13 +349,31 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
-                  <img
-                    class="examples-image"
-                    src="images/project-boxes.jpg"
-                    width="370"
-                    height="294"
-                    alt="2 блоки"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-boxes-mob.jpg    1x,
+                        ./images/project-boxes-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/project-boxes-tablet.jpg    1x,
+                        ./images/project-boxes-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/project-boxes-d.jpg    1x,
+                        ./images/project-boxes-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      class="examples-image"
+                      src="images/project-boxes-mob.jpg"
+                      alt="2 блоки"
+                  /></picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -260,13 +393,33 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
-                  <img
-                    class="examples-image"
-                    src="images/inspiration-has-no-borders.jpg"
-                    width="370"
-                    height="294"
-                    alt="монітор"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/inspiration-has-no-borders-mob.jpg    1x,
+                        ./images/inspiration-has-no-borders-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/inspiration-has-no-borders-tablet.jpg    1x,
+                        ./images/inspiration-has-no-borders-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/inspiration-has-no-borders-d.jpg    1x,
+                        ./images/inspiration-has-no-borders-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      class="examples-image"
+                      src="images/inspiration-has-no-borders-mob.jpg"
+                      width="370"
+                      height="294"
+                      alt="монітор"
+                  /></picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -286,13 +439,31 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
-                  <img
-                    class="examples-image"
-                    src="images/publishing-limited-edition.jpg"
-                    width="370"
-                    height="294"
-                    alt="Дизайн журналу"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/publishing-limited-edition-mob.jpg    1x,
+                        ./images/publishing-limited-edition-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/publishing-limited-edition-tablet.jpg    1x,
+                        ./images/publishing-limited-edition-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/publishing-limited-edition-d.jpg    1x,
+                        ./images/publishing-limited-edition-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      class="examples-image"
+                      src="images/publishing-limited-edition-mob.jpg"
+                      alt="Дизайн журналу"
+                  /></picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -312,9 +483,29 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-lab-mob.jpg    1x,
+                        ./images/project-lab-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/project-lab-tablet.jpg    1x,
+                        ./images/project-lab-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/project-lab-d.jpg    1x,
+                        ./images/project-lab-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
                   <img
                     class="examples-image"
-                    src="images/project-lab.jpg"
+                    src="images/project-lab-mob.jpg"
                     width="370"
                     height="294"
                     alt="Дизайн тегу"
@@ -338,13 +529,33 @@
             <li class="examples__item">
               <a class="link examples__link" href="">
                 <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/growing-business-mob.jpg    1x,
+                        ./images/growing-business-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)" />
+                    <source
+                      srcset="
+                        ./images/growing-business-tablet.jpg    1x,
+                        ./images/growing-business-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+
+                    <source
+                      srcset="
+                        ./images/growing-business-d.jpg    1x,
+                        ./images/growing-business-d@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
                   <img
                     class="examples-image"
-                    src="images/growing-business.jpg"
+                    src="images/growing-business-mob.jpg"
                     width="370"
                     height="294"
                     alt="додаток для ноутбуку"
-                  />
+                  /></picture>
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -474,5 +685,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

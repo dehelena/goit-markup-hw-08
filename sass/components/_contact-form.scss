@@ -9,7 +9,7 @@
   margin-bottom: 12px;
 
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -77,8 +77,8 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
 
   outline: none;
@@ -123,17 +123,13 @@
   outline-color: var(--accent-color);
 }
 
-.contact-form-terms-text {
-  font-size: 14px;
-  line-height: 1.71;
+.contact-form-checkbox-text {
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
 .contact-form-terms-link {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
   color: var(--accent-color);
   text-decoration: underline;
 }
@@ -157,5 +153,27 @@
   &:focus {
     background-color: var(--additional-accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form-terms-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+
+  .contact-form-capture {
+    line-height: 1.15;
+  }
+
+  .contact-form-comment {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
+  .contact-form-checkbox-text {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }

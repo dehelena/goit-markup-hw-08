@@ -2,10 +2,13 @@
   display: flex;
   gap: 30px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .clients__item {
-  width: 170px;
+  display: flex;
+  flex-basis: calc((100% - 30px) / 2);
+  width: 210px;
   height: 92px;
 }
 
@@ -36,5 +39,19 @@
   .clients__link:hover &,
   .clients__link:focus & {
     fill: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% - 60px) / 3);
+    width: 226px;
+    height: 92px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    flex-wrap: nowrap;
   }
 }
