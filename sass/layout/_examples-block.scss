@@ -1,5 +1,5 @@
 @media screen and (max-width: 767px) {
-  .examples__item {
+  .examples__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -84,7 +84,6 @@
   }
 
   .examples__item {
-    display: flex;
     flex-basis: calc((100% - 30px) / 2);
   }
 }

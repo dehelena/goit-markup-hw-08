@@ -14,14 +14,6 @@
 
 .features__item {
   text-align: left;
-
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 30px) / 2);
-  }
-
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 90px) / 4);
-  }
 }
 
 .features__title {
@@ -33,6 +25,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .features__text {
@@ -54,4 +47,19 @@
 .features__icon {
   width: 70px;
   height: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
+  .features__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }

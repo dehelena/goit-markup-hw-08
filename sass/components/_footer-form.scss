@@ -7,7 +7,6 @@
 
 .mail-form__input {
   width: 100%;
-  width: 450px;
   height: 50px;
   margin-bottom: 20px;
   padding: 15px;
@@ -57,6 +56,12 @@
   &:focus {
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mail-form__input {
+    width: 450px;
   }
 }
 
