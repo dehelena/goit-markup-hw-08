@@ -108,6 +108,12 @@
     display: flex;
   }
 
+  .mobile-menu-social__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
   .mobile-menu-social__link {
     position: relative;
     font-weight: 500;
@@ -116,13 +122,6 @@
     letter-spacing: 0.02em;
 
     color: var(--additional-accent-color);
-  }
-
-  .mobile-menu-social__link::after {
-    content: '';
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    margin-left: 10px;
-    transform: rotate(90deg);
   }
 }
 

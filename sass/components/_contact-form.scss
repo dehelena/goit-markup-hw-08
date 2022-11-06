@@ -156,11 +156,17 @@
   }
 }
 
+@media screen and (min-width: 786px) and (max-width: 1199px) {
+  .contact-form-capture {
+    max-width: 370px;
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .contact-form-terms-text {
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
   }
 
   .contact-form-capture {
