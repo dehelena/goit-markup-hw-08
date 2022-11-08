@@ -569,19 +569,12 @@ a {
 }
 .mail-form {
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .mail-form__input {
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
-  padding: 15px;
-  padding-left: 16px;
   color: var(--primary-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -607,6 +600,8 @@ a {
   min-width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -1058,36 +1053,23 @@ a {
 }
 
 .footer__full {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .footer__left-part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 60px;
 }
 
 .footer__middle-part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 60px;
 }
 
-.footer__right-part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+.footer__item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .footer__link {
@@ -1106,29 +1088,28 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 165px;
+    justify-content: space-around;
     align-items: baseline;
+  }
+  .footer__right-part {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__full {
     flex-wrap: nowrap;
-    column-gap: 0;
+    align-items: baseline;
+    text-align: left;
   }
   .footer__left-part {
-    align-items: baseline;
     flex-grow: 1;
   }
   .footer__middle-part {
-    align-items: baseline;
     margin-left: 70px;
   }
   .footer__right-part {
-    align-items: baseline;
     margin-left: 93px;
-  }
-  .footer__list {
-    align-items: flex-start;
   }
 }
 @media screen and (max-width: 767px) {
